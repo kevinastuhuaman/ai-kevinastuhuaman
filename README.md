@@ -1,15 +1,25 @@
-# Recruiting Portfolio
+# Inactive portfolio mirror
 
-Static recruiting dossier for Kevin Astuhuaman.
+This repo does **not** host `ai.kevinastuhuaman.com`.
 
-## Domain Guardrail
+Current domain setup:
 
-This repo should not publish `ai.kevinastuhuaman.com`.
-
-- `ai.kevinastuhuaman.com` stays on Kevin's existing Framer site.
+- `ai.kevinastuhuaman.com` is Kevin's existing Framer site.
 - `portfolio.kevinastuhuaman.com` is the new recruiting portfolio.
+- The active portfolio source lives in `kevinastuhuaman/recruiting-portfolio`.
 
-## Local Development
+This repo is kept for audit/history from the June 20, 2026 portfolio experiment. Do not enable GitHub Pages here, do not add a `CNAME`, and do not point DNS for `ai.kevinastuhuaman.com` at this repo.
+
+## How to inspect it
+
+```bash
+git clone https://github.com/kevinastuhuaman/ai-kevinastuhuaman.git
+cd ai-kevinastuhuaman
+ls
+git log --oneline --decorate --max-count=12
+```
+
+Local preview still works because the old static files are present:
 
 ```bash
 npm install
@@ -22,13 +32,15 @@ npm run dev
 npm run build
 ```
 
-## Public Surfaces
+## Historical surfaces
 
-- `/`: human recruiting portfolio
-- `/packet/`: one-page recruiter packet
-- `/resume/`: recruiter-readable resume
-- `/proof/`: claim and evidence registry
-- `/llms.txt`: concise machine-readable profile
-- `/llms-full.txt`: full machine-readable profile
-- `/profile.json`: structured profile data
-- `/.well-known/agent-skills/index.json`: agent-skill discovery
+These routes are only meaningful when running the repo locally. They should not be treated as live public portfolio URLs:
+
+- `/`
+- `/packet/`
+- `/resume/`
+- `/proof/`
+- `/llms.txt`
+- `/llms-full.txt`
+- `/profile.json`
+- `/.well-known/agent-skills/index.json`
