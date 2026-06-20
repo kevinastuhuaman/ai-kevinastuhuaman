@@ -1,95 +1,166 @@
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
+const mirrorHost = "ai.kevinastuhuaman.com";
+const canonicalOrigin = "https://portfolio.kevinastuhuaman.com";
 
-if (window.location.protocol === "http:" && !localHosts.has(window.location.hostname)) {
-  window.location.replace(`https://${window.location.host}${window.location.pathname}${window.location.search}${window.location.hash}`);
+document.documentElement.classList.add("has-js");
+
+const redirectTarget =
+  window.location.hostname === mirrorHost
+    ? `${canonicalOrigin}${window.location.pathname}${window.location.search}${window.location.hash}`
+    : window.location.protocol === "http:" &&
+        !localHosts.has(window.location.hostname)
+      ? `https://${window.location.host}${window.location.pathname}${window.location.search}${window.location.hash}`
+      : "";
+
+if (redirectTarget) {
+  window.location.replace(redirectTarget);
+} else {
+  initializePortfolio();
 }
 
-const modeButtons = document.querySelectorAll("[data-mode]");
-const modePanels = document.querySelectorAll("[data-mode-panel]");
+function initializePortfolio() {
+  const modeButtons = document.querySelectorAll("[data-mode]");
+  const modePanels = document.querySelectorAll("[data-mode-panel]");
 
-modeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const mode = button.dataset.mode;
-    modeButtons.forEach((item) => {
-      item.classList.toggle("is-active", item === button);
-      item.setAttribute("aria-pressed", String(item === button));
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const mode = button.dataset.mode;
+      modeButtons.forEach((item) => {
+        item.classList.toggle("is-active", item === button);
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      modePanels.forEach((panel) => {
+        panel.hidden = panel.dataset.modePanel !== mode;
+      });
     });
-    modePanels.forEach((panel) => {
-      panel.hidden = panel.dataset.modePanel !== mode;
+  });
+
+  const packet = `Kevin Astuhuaman is a Berkeley Haas MBA and AI Product Manager who gets close to the system. He built Trackly across web, iOS, macOS, CLI, and MCP; worked on AI observability tooling at PayPal Checkout across 15+ systems; and worked on digital-first financial products tied to 100K+ SMBs and a $620M ARR/P&L portfolio at BCP/Credicorp. Portfolio: https://portfolio.kevinastuhuaman.com/ GitHub: https://github.com/kevinastuhuaman LinkedIn: https://www.linkedin.com/in/kevinastuhuaman`;
+
+  document.querySelectorAll("[data-copy-packet]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(packet);
+        button.textContent = "Copied";
+        window.setTimeout(() => {
+          button.textContent = "Copy packet";
+        }, 1800);
+      } catch {
+        button.textContent = "Copy unavailable";
+      }
     });
   });
-});
 
-const packet = `Kevin Astuhuaman is an AI Product Manager and Berkeley Haas MBA who builds production AI-agent systems across recruiting automation, observability, and fintech. He built Trackly across web, iOS, macOS, CLI, and MCP surfaces; built AI observability tooling at PayPal across 15+ checkout systems; and worked on digital-first financial products tied to 100K+ SMBs and a $620M ARR/P&L portfolio. Portfolio: https://portfolio.kevinastuhuaman.com/ GitHub: https://github.com/kevinastuhuaman LinkedIn: https://www.linkedin.com/in/kevinastuhuaman`;
+  const searchButton = document.querySelector("[data-open-search]");
+  const searchDialog = document.querySelector("[data-search-dialog]");
+  const searchInput = document.querySelector("[data-search-input]");
+  const searchResults = document.querySelector("[data-search-results]");
 
-document.querySelectorAll("[data-copy-packet]").forEach((button) => {
-  button.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(packet);
-      button.textContent = "Copied";
-      window.setTimeout(() => {
-        button.textContent = "Copy packet";
-      }, 1800);
-    } catch {
-      button.textContent = "Copy unavailable";
-    }
-  });
-});
+  const searchable = [
+    [
+      "Trackly",
+      "/projects/trackly/",
+      "Real-time job-search agent, 1,900+ companies, web, iOS, macOS, CLI, MCP",
+    ],
+    [
+      "PayPal AI Observability",
+      "/projects/paypal-ai-observability/",
+      "AI observability tooling, 15+ checkout systems, 75% faster detection",
+    ],
+    [
+      "BCP Credicorp SMB Fintech",
+      "/projects/smb-fintech-bcp-credicorp/",
+      "Digital-first SMB products, 100K+ entrepreneurs, $620M ARR/P&L",
+    ],
+    [
+      "How I build with AI tools",
+      "/projects/agentic-dev-workflows/",
+      "Claude Code, Codex, MCP, evals, observability, automation",
+    ],
+    [
+      "Recruiter Packet",
+      "/packet/",
+      "One-page packet for target roles, proof points, work authorization, and links",
+    ],
+    ["Resume", "/resume/", "Recruiter-readable resume snapshot"],
+    ["Proof", "/proof/", "Evidence registry and claim status"],
+    [
+      "GitHub",
+      "https://github.com/kevinastuhuaman",
+      "Public repositories and build record",
+    ],
+    [
+      "LinkedIn",
+      "https://www.linkedin.com/in/kevinastuhuaman",
+      "Professional profile",
+    ],
+  ];
 
-const searchButton = document.querySelector("[data-open-search]");
-const searchDialog = document.querySelector("[data-search-dialog]");
-const searchInput = document.querySelector("[data-search-input]");
-const searchResults = document.querySelector("[data-search-results]");
-
-const searchable = [
-  ["Trackly", "/projects/trackly/", "Real-time job-search agent, 1,900+ companies, web, iOS, macOS, CLI, MCP"],
-  ["PayPal AI Observability", "/projects/paypal-ai-observability/", "AI observability tooling, 15+ checkout systems, 75% faster detection"],
-  ["BCP Credicorp SMB Fintech", "/projects/smb-fintech-bcp-credicorp/", "Digital-first SMB products, 100K+ entrepreneurs, $620M ARR/P&L"],
-  ["Agentic Dev Workflows", "/projects/agentic-dev-workflows/", "Claude Code, Codex, MCP, evals, observability, automation"],
-  ["Recruiter Packet", "/packet/", "One-page packet for target roles, proof points, work authorization, and links"],
-  ["Resume", "/resume/", "Recruiter-readable resume snapshot"],
-  ["Proof", "/proof/", "Evidence registry and claim status"],
-  ["GitHub", "https://github.com/kevinastuhuaman", "Public repositories and build record"],
-  ["LinkedIn", "https://www.linkedin.com/in/kevinastuhuaman", "Professional profile"]
-];
-
-function renderSearch(query = "") {
-  if (!searchResults) return;
-  const normalized = query.trim().toLowerCase();
-  const matches = searchable.filter(([title, , description]) => {
-    return `${title} ${description}`.toLowerCase().includes(normalized);
-  });
-  searchResults.innerHTML = matches
-    .map(([title, href, description]) => {
-      return `<a class="search-result" href="${href}"><strong>${title}</strong><span>${description}</span></a>`;
-    })
-    .join("");
-}
-
-function openSearch() {
-  if (!searchDialog) return;
-  searchDialog.removeAttribute("hidden");
-  renderSearch();
-  searchInput?.focus();
-}
-
-function closeSearch() {
-  searchDialog?.setAttribute("hidden", "");
-}
-
-searchButton?.addEventListener("click", openSearch);
-searchDialog?.addEventListener("click", (event) => {
-  if (event.target === searchDialog) closeSearch();
-});
-searchInput?.addEventListener("input", (event) => renderSearch(event.target.value));
-
-document.addEventListener("keydown", (event) => {
-  const isCommandSearch = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
-  if (isCommandSearch) {
-    event.preventDefault();
-    openSearch();
+  function renderSearch(query = "") {
+    if (!searchResults) return;
+    const normalized = query.trim().toLowerCase();
+    const matches = searchable.filter(([title, , description]) => {
+      return `${title} ${description}`.toLowerCase().includes(normalized);
+    });
+    searchResults.innerHTML = matches
+      .map(([title, href, description]) => {
+        return `<a class="search-result" href="${href}"><strong>${title}</strong><span>${description}</span></a>`;
+      })
+      .join("");
   }
-  if (event.key === "Escape") closeSearch();
-});
 
-renderSearch();
+  function openSearch() {
+    if (!searchDialog) return;
+    searchDialog.removeAttribute("hidden");
+    renderSearch();
+    searchInput?.focus();
+  }
+
+  function closeSearch() {
+    searchDialog?.setAttribute("hidden", "");
+  }
+
+  searchButton?.addEventListener("click", openSearch);
+  searchDialog?.addEventListener("click", (event) => {
+    if (event.target === searchDialog) closeSearch();
+  });
+  searchInput?.addEventListener("input", (event) =>
+    renderSearch(event.target.value),
+  );
+
+  document.addEventListener("keydown", (event) => {
+    const isCommandSearch =
+      (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
+    if (isCommandSearch) {
+      event.preventDefault();
+      openSearch();
+    }
+    if (event.key === "Escape") closeSearch();
+  });
+
+  renderSearch();
+
+  const revealTargets = document.querySelectorAll(
+    ".packet-wall, .section-grid, .packet-card, .artifact-card, .timeline-item, .proof-tile, .evidence-row",
+  );
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealTargets.forEach((item) => item.classList.add("is-visible"));
+  } else {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
+    );
+
+    revealTargets.forEach((item) => {
+      item.classList.add("reveal");
+      revealObserver.observe(item);
+    });
+  }
+}
