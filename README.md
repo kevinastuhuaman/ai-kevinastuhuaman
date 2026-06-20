@@ -2,6 +2,13 @@
 
 Static recruiting dossier for Kevin Astuhuaman.
 
+## Domain Guardrail
+
+This repo should not publish `ai.kevinastuhuaman.com`.
+
+- `ai.kevinastuhuaman.com` stays on Kevin's existing Framer site.
+- `portfolio.kevinastuhuaman.com` is the new recruiting portfolio.
+
 ## Local Development
 
 ```bash

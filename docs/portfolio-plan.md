@@ -29,8 +29,8 @@ Kevin Astuhuaman is an AI Product Manager and Berkeley Haas MBA who builds produ
 3. Add AI-readable files and structured data.
 4. Update GitHub profile README to align with the same claims.
 5. Deploy preview.
-6. Choose canonical domain. Recommendation: `portfolio.kevinastuhuaman.com` or migrate `ai.kevinastuhuaman.com` from Framer. Avoid `portfolio.kevinastogamon.ai` because it fragments identity and looks typo-like.
-7. Add backlinks from GitHub README, LinkedIn featured section, Ghost nav, and current Framer page if it remains live.
+6. Use `portfolio.kevinastuhuaman.com` as the canonical recruiting portfolio. Keep `ai.kevinastuhuaman.com` on the existing Framer site.
+7. Add backlinks from GitHub README, LinkedIn featured section, Ghost nav, and the current Framer page only if Kevin explicitly wants that.
 
 ## Next-Level Polish
 
