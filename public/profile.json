@@ -1,0 +1,77 @@
+{
+  "lastUpdated": "2026-06-20",
+  "canonicalUrl": "https://portfolio.kevinastuhuaman.com/",
+  "name": "Kevin Astuhuaman",
+  "location": "Bay Area",
+  "headline": "AI Product Manager building production AI-agent systems across recruiting automation, observability, and fintech.",
+  "targetRoles": [
+    "AI Product Manager",
+    "Technical Product Manager",
+    "Founder-adjacent Product Manager"
+  ],
+  "workAuthorization": "Eligible for up to 3 years of U.S. work authorization through OPT/STEM OPT. No sponsorship needed for the next role.",
+  "education": [
+    {
+      "school": "UC Berkeley Haas",
+      "credential": "MBA",
+      "date": "May 2026",
+      "notes": "STEM-designated"
+    },
+    {
+      "school": "UC Berkeley Haas",
+      "credential": "AI for Business Graduate Certificate",
+      "date": "2026",
+      "notes": "First cohort"
+    },
+    {
+      "school": "PUCP",
+      "credential": "BS Industrial Engineering",
+      "date": null
+    }
+  ],
+  "experienceAnchors": [
+    {
+      "name": "Trackly",
+      "summary": "Real-time job-search agent with web, iOS, macOS, CLI, and MCP surfaces.",
+      "publicUrls": [
+        "https://usetrackly.app",
+        "https://apps.apple.com/us/app/trackly-apply-first/id6758267565",
+        "https://github.com/kevinastuhuaman/trackly-cli"
+      ],
+      "claims": [
+        "1,900+ companies monitored",
+        "128,975+ roles shown publicly",
+        "500+ MAU from latest internal snapshot"
+      ]
+    },
+    {
+      "name": "PayPal Checkout",
+      "summary": "Technical PM internship focused on AI observability tooling across 15+ internal checkout systems.",
+      "claims": [
+        "75% faster issue detection in the internship project workflow",
+        "$100M target uplift opportunity, not achieved-impact wording"
+      ],
+      "publicSafety": "Do not publish internal artifacts or confidential system names."
+    },
+    {
+      "name": "BCP / Credicorp",
+      "summary": "Digital-first financial products for small businesses and underserved customers.",
+      "publicUrls": [
+        "https://facultad-ciencias-ingenieria.pucp.edu.pe/2024/10/07/kevin-astuhuaman-egresado-de-ingenieria-industrial-admitido-a-maestria-en-berkeley/"
+      ],
+      "claims": [
+        "100K+ SMBs and underserved customers",
+        "$620M ARR/P&L portfolio wording"
+      ]
+    }
+  ],
+  "links": {
+    "portfolio": "https://portfolio.kevinastuhuaman.com/",
+    "github": "https://github.com/kevinastuhuaman",
+    "linkedin": "https://www.linkedin.com/in/kevinastuhuaman",
+    "writing": "https://kevinastuhuaman.com/",
+    "x": "https://x.com/kevinastuhuaman",
+    "youtube": "https://www.youtube.com/@kevinastuhuaman",
+    "trackly": "https://usetrackly.app"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-navigation",
+      "type": "skill-md",
+      "description": "Understand and navigate Kevin Astuhuaman's public recruiting portfolio, proof ledger, selected projects, and contact surfaces.",
+      "url": "/.well-known/agent-skills/site-navigation/SKILL.md",
+      "digest": "sha256:d995ab6f31397af7665673ffac9ee03aefed3f8ede795f1f20e170df85fd7672"
+    }
+  ]
+}

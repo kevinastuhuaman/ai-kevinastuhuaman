@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic Development Workflows | Kevin Astuhuaman</title>
+    <meta name="description" content="Agentic development workflows, MCP, LLM observability, and evaluation systems from Kevin Astuhuaman." />
+    <link rel="canonical" href="https://portfolio.kevinastuhuaman.com/projects/agentic-dev-workflows/" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/">Kevin Astuhuaman</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/resume/">Resume</a>
+          <a href="/proof/">Proof</a>
+          <a href="/projects/trackly/">Trackly</a>
+        </nav>
+        <button class="button secondary" type="button" data-open-search>Search</button>
+      </header>
+      <main class="page">
+        <div class="page-inner">
+          <p class="kicker">Builder system</p>
+          <h1>Agentic development workflows that turn AI tools into operating leverage.</h1>
+          <p class="lede">
+            My GitHub surface is strongest when it shows the operating system behind the products: MCP servers,
+            LLM observability, evaluation frameworks, CLI tools, native apps, and release workflows.
+          </p>
+
+          <div class="case-grid">
+            <div class="case-box">
+              <strong>MCP and CLI</strong>
+              <p>Trackly CLI and MCP server let AI assistants work with recruiting data instead of only showing it in a UI.</p>
+            </div>
+            <div class="case-box">
+              <strong>Observability</strong>
+              <p>Langfuse, PostHog, Datadog-style workflows, and structured review gates make AI systems inspectable.</p>
+            </div>
+            <div class="case-box">
+              <strong>Evals</strong>
+              <p>Golden test sets, classification evaluation, and review loops keep automation from becoming invisible risk.</p>
+            </div>
+          </div>
+
+          <h2>Representative public repos</h2>
+          <ul>
+            <li><a href="https://github.com/kevinastuhuaman/trackly-cli">trackly-cli</a>: CLI and MCP server.</li>
+            <li><a href="https://github.com/kevinastuhuaman/llm-observability">llm-observability</a>: self-hosted observability patterns.</li>
+            <li><a href="https://github.com/kevinastuhuaman/umami-mcp-server">umami-mcp-server</a>: Go MCP server for behavioral analytics.</li>
+            <li><a href="https://github.com/kevinastuhuaman/marketplace-refund-policy-kit">marketplace-refund-policy-kit</a>: policy simulation and shadow-mode evaluator.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="search-dialog" data-search-dialog hidden>
+      <div class="search-panel" role="dialog" aria-modal="true" aria-label="Find proof">
+        <input data-search-input type="search" placeholder="Find proof, projects, links" />
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

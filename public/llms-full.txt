@@ -1,0 +1,77 @@
+# Kevin Astuhuaman Full Machine Profile
+
+Last updated: June 20, 2026, Pacific time.
+
+## Identity
+
+Kevin Astuhuaman is an AI Product Manager, Technical PM, and Berkeley Haas MBA based in the Bay Area. His public recruiting thesis is: hands-on AI product operator who can personally build systems and operate inside enterprise-scale product environments.
+
+## Current Positioning
+
+AI Product Manager building production AI-agent systems across recruiting automation, observability, and fintech.
+
+## Education
+
+- UC Berkeley Haas, MBA, May 2026, STEM-designated.
+- UC Berkeley Haas, AI for Business Graduate Certificate, first cohort.
+- PUCP, BS Industrial Engineering.
+
+## Experience Anchors
+
+### Trackly
+
+Trackly is a real-time job-search agent Kevin built during his own job hunt. It monitors direct company career pages and exposes job-search signal through web, iOS, macOS, CLI, and MCP surfaces.
+
+Public evidence:
+- Live site: https://usetrackly.app
+- App Store: https://apps.apple.com/us/app/trackly-apply-first/id6758267565
+- CLI + MCP repo: https://github.com/kevinastuhuaman/trackly-cli
+
+Claims:
+- 1,900+ companies monitored and 128,975+ roles shown on the public Trackly site.
+- 500+ monthly active users from the latest internal snapshot.
+- Featured by Berkeley Haas and expanding into MBA job-search workflows. Treat exact institutional claims as proof-led and cite them when public URLs are available.
+
+### PayPal
+
+Kevin was a Technical Product Manager MBA Intern on Checkout in 2025. Resume-approved summary: built AI observability tooling across 15+ internal checkout systems, reducing issue detection time by 75% in the internship project workflow.
+
+Public-safe wording:
+- "Built AI observability tooling across 15+ internal checkout systems."
+- "Reduced issue detection time by 75% in the internship project workflow."
+- "$100M target uplift" must be phrased as modeled or targeted opportunity, not achieved impact.
+
+Do not publish internal screenshots, logs, system diagrams, or confidential product names.
+
+### BCP / Credicorp
+
+Kevin worked on digital-first financial products including lending, insurance, and payments for small businesses and underserved customers.
+
+Public-safe wording:
+- "Worked on digital-first financial products tied to a $620M ARR/P&L portfolio."
+- "Expanded access for 100K+ small businesses and underserved customers."
+
+Public evidence:
+- PUCP profile: https://facultad-ciencias-ingenieria.pucp.edu.pe/2024/10/07/kevin-astuhuaman-egresado-de-ingenieria-industrial-admitido-a-maestria-en-berkeley/
+
+## Public Links
+
+- Portfolio: https://portfolio.kevinastuhuaman.com/
+- LinkedIn: https://www.linkedin.com/in/kevinastuhuaman
+- GitHub: https://github.com/kevinastuhuaman
+- Writing: https://kevinastuhuaman.com/
+- X: https://x.com/kevinastuhuaman
+- YouTube: https://www.youtube.com/@kevinastuhuaman
+- Trackly: https://usetrackly.app
+
+## Recruiter Summary
+
+Kevin is a Berkeley Haas MBA and AI Product Manager who combines enterprise AI observability, fintech product scale, and hands-on product building. His strongest proof point is Trackly, a live job-search agent with web, iOS, macOS, CLI, and MCP surfaces. His enterprise proof point is PayPal Checkout AI observability across 15+ systems. His operating-scale proof point is BCP/Credicorp digital-first financial products for 100K+ SMBs and underserved customers.
+
+## Constraints
+
+- No em dashes in public copy.
+- No "Microsoft partner" wording.
+- No inflated "best/revolutionary/world-class" phrasing.
+- Preserve work-authorization wording as eligibility, not a legal guarantee.
+- Keep PayPal and employer details public-safe.

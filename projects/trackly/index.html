@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trackly Case Study | Kevin Astuhuaman</title>
+    <meta name="description" content="Trackly case study: real-time job-search agent built across web, iOS, macOS, CLI, and MCP." />
+    <link rel="canonical" href="https://portfolio.kevinastuhuaman.com/projects/trackly/" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/">Kevin Astuhuaman</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/resume/">Resume</a>
+          <a href="/proof/">Proof</a>
+          <a href="/llms.txt">llms.txt</a>
+        </nav>
+        <button class="button secondary" type="button" data-open-search>Search</button>
+      </header>
+      <main class="page">
+        <div class="page-inner">
+          <p class="kicker">Flagship build</p>
+          <h1>Trackly turns direct company career pages into a real-time job-search agent.</h1>
+          <p class="lede">
+            I built Trackly during my own job hunt because job boards were too slow. The system monitors direct
+            company career pages, detects new roles, and gives candidates earlier signal through web, iOS, macOS,
+            CLI, and MCP surfaces.
+          </p>
+
+          <div class="case-grid">
+            <div class="case-box">
+              <strong>Problem</strong>
+              <p>Strong roles often appear on company career pages before LinkedIn or third-party job boards. Candidates need signal faster than their feeds provide.</p>
+            </div>
+            <div class="case-box">
+              <strong>System</strong>
+              <p>Career-page monitors, ATS parsers, ranking, search, native clients, a web app, and agent integrations through CLI and MCP.</p>
+            </div>
+            <div class="case-box">
+              <strong>Proof</strong>
+              <p>1,900+ companies, 128,975+ roles shown publicly, App Store listing, public CLI/MCP repo, and 500+ MAU from the latest internal snapshot.</p>
+            </div>
+          </div>
+
+          <div class="artifact-visual">
+            <img src="/assets/trackly-home.png" alt="Trackly public homepage showing company and job coverage" />
+          </div>
+
+          <h2>What this demonstrates</h2>
+          <ul>
+            <li>Product judgment: the wedge came from a real user pain in the MBA recruiting cycle.</li>
+            <li>Technical fluency: the system spans scraping, data quality, ranking, SwiftUI, Next.js, backend APIs, CLI, and MCP.</li>
+            <li>Operational taste: the product is not a demo. It has release pipelines, app distribution, monitoring, and user feedback loops.</li>
+            <li>Agent-native thinking: Trackly data can be used by humans in UI or by AI assistants through MCP.</li>
+          </ul>
+
+          <h2>Public links</h2>
+          <div class="button-row">
+            <a class="button blue" href="https://usetrackly.app">Live site</a>
+            <a class="button secondary" href="https://apps.apple.com/us/app/trackly-apply-first/id6758267565">App Store</a>
+            <a class="button secondary" href="https://github.com/kevinastuhuaman/trackly-cli">CLI + MCP repo</a>
+            <a class="button secondary" href="/proof/">Proof ledger</a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="search-dialog" data-search-dialog hidden>
+      <div class="search-panel" role="dialog" aria-modal="true" aria-label="Find proof">
+        <input data-search-input type="search" placeholder="Find proof, projects, links" />
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

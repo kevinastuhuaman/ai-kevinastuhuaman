@@ -1,0 +1,39 @@
+{
+  "lastUpdated": "2026-06-20",
+  "claims": [
+    {
+      "claim": "Trackly monitors 1,900+ companies and shows 128,975+ roles publicly.",
+      "status": "public-proof",
+      "source": "https://usetrackly.app",
+      "notes": "Use current public site numbers at publish time."
+    },
+    {
+      "claim": "Trackly is listed on the App Store for iPhone, iPad, and Mac.",
+      "status": "public-proof",
+      "source": "https://apps.apple.com/us/app/trackly-apply-first/id6758267565"
+    },
+    {
+      "claim": "Kevin's BCP/Credicorp work expanded access to credit for 100K+ people or businesses.",
+      "status": "public-proof",
+      "source": "https://facultad-ciencias-ingenieria.pucp.edu.pe/2024/10/07/kevin-astuhuaman-egresado-de-ingenieria-industrial-admitido-a-maestria-en-berkeley/"
+    },
+    {
+      "claim": "PayPal AI observability tooling reduced issue detection time by 75% in the internship project workflow.",
+      "status": "resume-approved",
+      "source": "private resume language",
+      "notes": "Do not publish internal screenshots or system details."
+    },
+    {
+      "claim": "Trackly has 500+ monthly active users.",
+      "status": "internal-snapshot",
+      "source": "latest internal snapshot",
+      "notes": "Add public stats evidence before making this the primary headline."
+    },
+    {
+      "claim": "AI for Business Graduate Certificate first cohort.",
+      "status": "private-artifact",
+      "source": "local certificate image",
+      "notes": "Add public Berkeley URL when available."
+    }
+  ]
+}
